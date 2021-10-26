@@ -6,7 +6,7 @@ The model wad trained on the expression data of 2387 genes from TCGA RNAseq data
 ## Directory structure
 
 The root contains two subdirectories, inputs where data used for model training and prediction is stored, and outputs where the model, accuracy and loss plots are stored.
-The three python files starting with 'CUP' are the core scripts of the project. 
+The three python files starting with 'CUP' are the core codes of the project. 
 
 ## Library dependencies
 
@@ -14,23 +14,29 @@ matplotlib v3.4.3 <br>
 numpy v1.21.2 <br>
 pandas v1.3.3 <br>
 scikit-learn v1.0 <br>
+imbalanced-learn v0.5.0 <br>
 tqdm v4.62.3 <br>
 torch v0.2.2 <br>
+argparse v1.4.0 <br>
 
 ## usage
+All the commands should be run in the root directory
 ### Run model training without learning rate scheduler and early stopping
 
-    python CUP_traning -i [input_file] 
+    python CUP_traning.py -i [inputs/training data] 
 
 ### Run model training with learning rate scheduler
 
-    python CUP_traning -i [input_file] --learning-rate
+    python CUP_traning.py -i [inputs/training data] --learning-rate
 
 ### Run model training with early stopping
 
-    python CUP_traning -i [input_file] --early-stopping
+    python CUP_traning.py -i [inputs/training data] --early-stopping
 
 ### Run model training with both(strongly recommended)
 
-    python CUP_traning -i [input_file] --learning-rate --early-stopping
+    python CUP_traning.py -i [inputs/training data] --learning-rate --early-stopping
+    
+### Run prediction
+python CUP_prediction.py -dt [inputs/traning data] -dp [inputs/test data] -m [outputs/cup_dnn_model.pkl]
 

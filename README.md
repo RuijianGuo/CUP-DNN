@@ -38,5 +38,5 @@ All the commands should be run in the root directory
     python CUP_traning.py -i [inputs/training data] --learning-rate --early-stopping
     
 ### Run prediction
-python CUP_prediction.py -dt [inputs/traning data] -dp [inputs/test data] -m [outputs/cup_dnn_model.pkl]
+    python CUP_prediction.py -dt [inputs/traning data] -dp [inputs/test data] -m [outputs/cup_dnn_model.pkl]
 

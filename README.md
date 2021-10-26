@@ -19,7 +19,7 @@ tqdm v4.62.3 <br>
 torch v0.2.2 <br>
 argparse v1.4.0 <br>
 
-## usage
+## Usage
 All the commands should be run in the root directory
 ### Run model training without learning rate scheduler and early stopping
 

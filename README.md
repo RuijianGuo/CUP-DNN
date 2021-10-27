@@ -23,20 +23,20 @@ argparse v1.4.0 <br>
 All the commands should be run in the root directory
 ### Run model training without learning rate scheduler and early stopping
 
-    python CUP_traning.py -i [inputs/training data] 
+    python CUP_traning.py -i inputs/[training data] 
 
 ### Run model training with learning rate scheduler
 
-    python CUP_traning.py -i [inputs/training data] --learning-rate
+    python CUP_traning.py -i inputs/[training data] --learning-rate
 
 ### Run model training with early stopping
 
-    python CUP_traning.py -i [inputs/training data] --early-stopping
+    python CUP_traning.py -i inputs/[training data] --early-stopping
 
 ### Run model training with both(strongly recommended)
 
-    python CUP_traning.py -i [inputs/training data] --learning-rate --early-stopping
+    python CUP_traning.py -i inputs/[training data] --learning-rate --early-stopping
     
 ### Run prediction
-    python CUP_prediction.py -dt [inputs/traning data] -dp [inputs/test data] -m [outputs/cup_dnn_model.pkl]
+    python CUP_prediction.py -dt inputs/[traning data] -dp inputs/[test data] -m outputs/[cup_dnn_model.pkl]
 
